@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars page</title>
+</head>
+<body>
+    <table border="1" cellpadding="2">
+        <tr>
+            <th colspan="4">List of cars</th>
+        </tr>
+        <tr>
+            <th>Index</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Serial number</th>
+        </tr>
+        <tr th:each="car, state : ${cars}">
+            <td align="center" th:text="${state.index} + 1">Index</td>
+            <td th:text="${car.brand}">Brand</td>
+            <td th:text="${car.model}">Model</td>
+            <td th:text="${car.serialNumber}">Serial number</td>
+        </tr>
+    </table>
+</body>
+</html>
